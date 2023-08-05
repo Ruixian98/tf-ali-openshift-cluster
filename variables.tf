@@ -6,18 +6,18 @@ variable "region" {
     default = "cn-hongkong"
 }
 variable "access_key" {
-    default = "LTAI*****haBc"
+    default = "LTAI5tRyNnEpyL4tRNQbRYMp"
 }
 variable "secret_key" {
-    default = "Chn8*****yVrI"
+    default = "Jg9QKUfljr2QH7Z0FGfWqvaNYsPx8G"
 }
 #启动用于执行自动化部署脚本的服务器所在的vpc
 variable "launcher_vpc_id" {
-    default = "vpc-j6ci*****yf5y"
+    default = "vpc-j6cief7zf2wni5l52yf5y"
 }
 #启动用于执行自动化部署脚本的服务器所在的交换机
 variable "launcher_vswitch_id" {
-    default = "vsw-j6cr*****z0n6"
+    default = "vsw-j6cr48zg87vpjmrunz0n6"
 }
 #用于执行自动化部署脚本的服务器的ssh登录密码，用户为root
 variable "ssh_password" {
@@ -25,12 +25,15 @@ variable "ssh_password" {
 }
 #openshift集群访问地址使用的域名，必须在上面AKSK所在的账户中
 variable "base_domain" {
-    default = "*****.*****"
+    default = "uxian.online"
 }
 #openshift集群名称，该名称将用于最后集群提供公网访问的域名地址，比如test.uxian.online，*.test.uxian.online 等一系列域名
 variable "openshift_cluster_name" {
     default = "test"
 }
+
+
+#如果实际的阿里云vpc网络环境与一下网段配置不冲突可以使用默认配置
 #openshift集群名称内部资源网段
 variable "openshift_cluster_network" {
     default = "10.128.0.0/14"
