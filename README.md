@@ -7,6 +7,8 @@ Retrieve the PULL SECRET content from [REDHAT](https://console.redhat.com/opensh
 
 Then go run terraform, good luck
 ```sh
-terraform1.2.5 plan
-terraform1.2.5 apply
+terraform plan
+terraform apply
 ```
+
+**All output logs of the deployment process will be recorded in the file /var/log/openshift_install.log on the openshift-launcher server.**

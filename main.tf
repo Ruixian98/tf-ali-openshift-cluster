@@ -12,6 +12,9 @@ data "template_file" "userdata_sh" {
     cloudname = var.cloudname
     region = var.region
     base_domain = var.base_domain
+    openshift_cluster_network = var.openshift_cluster_network
+    openshift_machine_network = var.openshift_machine_network
+    openshift_service_etwork = var.openshift_service_etwork
   }
 }
 data "alicloud_zones" "default" {
