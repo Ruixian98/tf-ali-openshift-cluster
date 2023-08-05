@@ -75,13 +75,13 @@ metadata:
   name: test
 networking:
   clusterNetwork:
-  - cidr: 10.128.0.0/14
+  - cidr: ${openshift_cluster_network}
     hostPrefix: 23
   machineNetwork:
-  - cidr: 10.0.0.0/16
+  - cidr: ${openshift_machine_network}
   networkType: OVNKubernetes
   serviceNetwork:
-  - 172.30.0.0/16
+  - ${openshift_service_etwork}
 platform:
   ${cloudname}:
     region: ${region}
